@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@aeternity/aepp-components": "git+https://github.com/aeternity/aepp-components.git#develop",
-    "@aeternity/aepp-sdk": "^2.4.0",
+    "@aeternity/aepp-sdk": "3.0.0",
     "axios": "^0.18.0",
     "core-js": "^2.6.5",
     "vue": "^2.6.10"

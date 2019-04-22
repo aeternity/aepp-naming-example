@@ -15,6 +15,9 @@ const main = async (name) => {
     nativeMode: true
   });
 
+  const query = await client.aensQuery(name);
+  console.log(query);
+
   const preclaim = await client.aensPreclaim(name);
   console.log(preclaim);
 
@@ -25,4 +28,4 @@ const main = async (name) => {
   console.log(update);
 };
 
-main('pegah.test');
+main('wesdsfs.test');
