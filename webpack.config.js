@@ -42,7 +42,7 @@ module.exports = env => {
         inject: true,
         // chunks: ['main'],
         title: 'Aeternity Naming Demo',
-        template: './public/index.html',
+        template: './src/index.html',
         filename: distFolder + '/index.html',
         // Avoids building twice for dev
         alwaysWriteToDisk: true
