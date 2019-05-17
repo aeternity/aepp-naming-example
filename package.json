@@ -3,9 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack -p --env.NODE_ENV=prod",
-    "dev": "webpack-dev-server --env.NODE_ENV=dev --config ./webpack.config.js --verbose",
+    "serve": "webpack-dev-server --env.NODE_ENV=dev --config ./webpack.config.js --verbose",
     "build:stats": "webpack --env.NODE_ENV=prod --profile --json > stats.json"
   },
   "dependencies": {
