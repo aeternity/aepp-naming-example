@@ -10,6 +10,6 @@ git init && \
 git remote add origin git@github.com:aeternity/aepp-naming-example.git && \
 git checkout -b gh-pages && \
 git add * && \
-git commit -m "website demo ${GIT_REV} deployment to gh-pages" && \
+git commit -m "naming aepp ${GIT_REV} deployment to gh-pages" && \
 git fetch && git rebase -s recursive -Xtheirs origin/gh-pages && \
 git push origin gh-pages
