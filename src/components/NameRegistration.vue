@@ -75,7 +75,19 @@
         methods: {
             async showRegisteredNames() {
                 this.showUpdating = true;
-                const middlewareUrl = "https://testnet.mdw.aepps.com/";
+                const nodeInfo = await this.client.getNodeInfo();
+                let middlewareUrl = '';
+                switch (nodeInfo.nodeNetworkId) {
+                  case 'ae_uat':
+                    // TESTNET
+                    middlewareUrl = 'https://testnet.mdw.aepps.com/'
+                    break
+                  case 'ae_mainnet':
+                    middlewareUrl = 'https://mdw.aepps.com/'
+                    break
+                  default:
+                    throw Error('Could not parse network Id. Please upgrade your base aepp.')
+                }
                 const namingAccTxs = await axios.get(`${middlewareUrl}/middleware/transactions/account/${this.pub}`).catch(console.error).then(res => res.data);
                 const nameClaimTxs = namingAccTxs
                     .filter(tx => tx.tx.type === 'NameClaimTx')
@@ -178,6 +190,6 @@
 
   #app-registered-names ul {
     list-style: none;
-    padding: 0px;
+    padding: 0;
   }
 </style>
